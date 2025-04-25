@@ -6,6 +6,7 @@ import boardRouter from "./routes/board.route.js";
 import connectDB from "./configs/mongodb.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import fileUpload from "express-fileupload";
 
 const allowedOrigins = [process.env.CLIENT_URL];
 const app = express();
@@ -13,6 +14,7 @@ const app = express();
 // Middelewares
 app.use(express.json());
 app.use(cookieParser());
+app.use(fileUpload());
 app.use(
   cors({
     origin: allowedOrigins,

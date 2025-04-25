@@ -1,3 +1,4 @@
+import { json } from "express";
 import Pin from "../models/pin.model.js";
 import User from "../models/user.model.js";
 
@@ -50,4 +51,20 @@ export const getPin = async (req, res) => {
   } catch (error) {
     console.log("Error fetching single pin:", error);
   }
+};
+export const createPin = async (req, res) => {
+  const { title, description, link, board, tags, textOptions, canvasOptions } =
+    req.body;
+  const media = req.files.media;
+  if (
+    (!title, !description, !link, !board, !tags, !textOptions, !canvasOptions)
+  ) {
+    return res
+      .status(400)
+      .json({ success: false, message: "All fields are required" });
+  }
+  const parsedTextOptions = JSON.parse(textOptions || "{}");
+  const parsedCanvasOPtions = JSON.parse(canvasOptions || "{}");
+ 
+  
 };
