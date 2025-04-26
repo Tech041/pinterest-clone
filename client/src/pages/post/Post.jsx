@@ -30,12 +30,12 @@ const Post = () => {
       </svg>
       <div className="postContainer">
         <div className="postImg">
-          <Image src={data.media} alt={"post_image"} w={736} />
+          <Image path={data.media} alt={"post_image"} w={736} />
         </div>
         <div className="postDetails">
-          <PostInteractions />
+          <PostInteractions postId={id} />
           <Link to={`/${data.user.username}`} className="postUser">
-            <Image src={data.user.img || "/general/noAvatar.png"} alt={""} />
+            <Image path={data.user.img || "/general/noAvatar.png"} alt={""} />
             <span className="">{data.user.displayName}</span>
           </Link>
           <Comments id={data._id} />

@@ -5,7 +5,7 @@ const Comment = ({ comment }) => {
   return (
     <div className="comment">
       <Image
-        src={comment.user.img || "/general/noAvatar.png"}
+        path={comment.user.img || "/general/noAvatar.png"}
         alt=""
         className={""}
       />

@@ -56,6 +56,7 @@ const Create = () => {
           },
         });
         console.log(res);
+        navigate(`/pin/${res.data._id}`);
       } catch (error) {
         console.log("Error creating board", error);
       }
