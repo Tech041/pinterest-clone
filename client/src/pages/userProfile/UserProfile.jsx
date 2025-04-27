@@ -7,8 +7,12 @@ import { useQuery } from "@tanstack/react-query";
 import apiRequest from "../../utils/apiRequest";
 import { useParams } from "react-router-dom";
 import FollowButton from "./FollowButton";
+import useAuthStore from "../../utils/authStore";
+import { toast } from "react-toastify";
 
 const UserProfile = () => {
+  const { currentUser } = useAuthStore();
+
   const { username } = useParams();
   const [type, setType] = useState("created");
 
@@ -20,6 +24,7 @@ const UserProfile = () => {
   if (isPending) return "Loading..";
   if (error) return "An error occurred " + error.message;
   if (!data) return "User not found!";
+ 
   console.log("User Data are:", data);
 
   return (

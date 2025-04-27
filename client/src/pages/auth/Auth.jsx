@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "../../components/image/Image";
 import "./Auth.css";
 import apiRequest from "../../utils/apiRequest";
 import { toast } from "react-toastify";

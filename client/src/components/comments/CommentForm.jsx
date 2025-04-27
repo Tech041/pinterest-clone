@@ -2,10 +2,13 @@ import EmojiPicker from "emoji-picker-react";
 import { useState } from "react";
 import apiRequest from "../../utils/apiRequest";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import useAuthStore from "../../utils/authStore";
+import { toast } from "react-toastify";
 
 const CommentForm = ({ id }) => {
   const [open, setOpen] = useState(false);
   const [desc, setDesc] = useState("");
+  const { currentUser } = useAuthStore();
 
   const addComment = async (comment) => {
     const res = await apiRequest.post("/comments", comment);
@@ -28,6 +31,10 @@ const CommentForm = ({ id }) => {
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!currentUser) {
+      toast.error("Login to comment !!");
+      return;
+    }
     try {
       mutation.mutate({
         description: desc,

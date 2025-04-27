@@ -3,13 +3,23 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import Image from "../image/Image";
 import "./PostInteractions.css";
 import apiRequest from "../../utils/apiRequest";
-const interact = async (id, type) => {
-  const res = await apiRequest.post(`/pins/interact/${id}`, {
-    type,
-  });
-  return res.data;
-};
+import useAuthStore from "../../utils/authStore";
+import { toast } from "react-toastify";
+
 const PostInteractions = ({ postId }) => {
+  const { currentUser } = useAuthStore();
+
+  const interact = async (id, type) => {
+    if (!currentUser) {
+      toast.error("Login to interact!!");
+      return;
+    }
+    const res = await apiRequest.post(`/pins/interact/${id}`, {
+      type,
+    });
+    return res.data;
+  };
+
   const queryClient = useQueryClient();
   const mutation = useMutation({
     mutationFn: ({ id, type }) => interact(id, type),
