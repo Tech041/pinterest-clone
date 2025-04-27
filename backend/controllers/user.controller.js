@@ -23,7 +23,8 @@ export const registerUser = async (req, res) => {
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      sameSite: "none",
+      secure: true,
       maxAge: 30 * 24 * 60 * 60 * 1000,
     });
     const { hashedPassword, ...detailsWithoutPassword } = user.toObject();
@@ -62,7 +63,8 @@ export const loginUser = async (req, res) => {
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      sameSite: "none",
+      secure: true,
       maxAge: 30 * 24 * 60 * 60 * 1000,
     });
     const { hashedPassword, ...detailsWithoutPassword } = user.toObject();
