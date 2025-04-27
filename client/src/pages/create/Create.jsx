@@ -3,7 +3,7 @@ import IkImage from "../../components/image/Image";
 import useAuthStore from "../../utils/authStore";
 import "./Create.css";
 import { useEffect, useRef, useState } from "react";
-import Editor from "../../components/Editor/Editor";
+import Editor from "../../components/editor/Editor";
 import useEditorStore from "../../utils/editorStore";
 import apiRequest from "../../utils/apiRequest";
 
