@@ -1,7 +1,7 @@
 import "./Comments.css";
 import { useQuery } from "@tanstack/react-query";
 import apiRequest from "../../utils/apiRequest";
-import Comment from "./comment";
+import Comment from "./Comment";
 import CommentForm from "./commentForm";
 
 const Comments = ({ id }) => {
