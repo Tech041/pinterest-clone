@@ -18,6 +18,17 @@
 .authContainer h1 {
   font-weight: 400;
 }
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  background-color: red;
+  padding: 4px;
+  border-radius: 50%;
+}
 .authContainer form {
   width: 100%;
   display: flex;

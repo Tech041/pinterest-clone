@@ -6,7 +6,8 @@ const LeftBar = () => {
     <div className="leftBar">
       <div className="menuIcons">
         <Link to="/" className="menuIcon">
-          <Image path="/general/logo.png" alt="Logo" className="logo" />
+          {/* <Image path="/general/logo.jpg" alt="Logo" className="logo" /> */}
+          <span className="logo">N</span>
         </Link>
         <Link to="/" className="menuIcon">
           <Image path="/general/home.svg" alt="Home" className="" />

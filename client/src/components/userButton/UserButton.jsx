@@ -58,7 +58,7 @@ const UserButton = () => {
     </div>
   ) : (
     <Link to={"/auth"} className="loginLink">
-      Login/Sign up
+      Login
     </Link>
   );
 };

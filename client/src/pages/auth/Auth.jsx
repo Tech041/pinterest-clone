@@ -39,7 +39,8 @@ const Auth = () => {
   return (
     <div className="authPage">
       <div className="authContainer">
-        <Image path="/general/logo.png" w={36} h={36} alt={""} className={""} />
+        {/* <Image path="/general/logo.png" w={36} h={36} alt={""} className={""} /> */}
+        <span className="logo">N</span>
         <h1 className="">
           {isRegister ? "Create an account" : "Login to your account"}
         </h1>
