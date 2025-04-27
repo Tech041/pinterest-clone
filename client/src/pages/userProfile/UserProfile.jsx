@@ -10,7 +10,7 @@ import FollowButton from "./FollowButton";
 
 const UserProfile = () => {
   const { username } = useParams();
-  const [type, setType] = useState("saved");
+  const [type, setType] = useState("created");
 
   const { isPending, error, data } = useQuery({
     queryKey: ["profile", username],
