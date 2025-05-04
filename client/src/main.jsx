@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLayout from "./pages/layout/MainLayout.jsx";
 import { ToastContainer } from "react-toastify";
 import React from "react";
+import Landing from "./pages/landing/Landing.jsx";
 const queryClient = new QueryClient();
 // Dynamic import via React.lazy()
 const Home = React.lazy(() => import("./pages/home/Home.jsx"));
@@ -27,8 +28,9 @@ createRoot(document.getElementById("root")).render(
     <ToastContainer />
     <Router>
       <Routes>
+        <Route path="/" element={<Landing />} />
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/create" element={<Create />} />
           <Route path="/pin/:id" element={<Post />} />
           <Route path="/:username" element={<UserProfile />} />

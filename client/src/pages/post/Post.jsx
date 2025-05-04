@@ -22,7 +22,7 @@ const Post = () => {
   return (
     <div className="postPage">
       <svg
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/home")}
         height="20"
         viewBox="0 0 24 24"
         width="20"

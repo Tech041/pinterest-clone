@@ -21,7 +21,13 @@ const Gallery = ({ search, userId, boardId }) => {
     initialPageParam: 0,
     getNextPageParam: (lastPage, pages) => lastPage.nextCursor,
   });
-  if (status === "pending") return "Loading...";
+  if (status === "pending")
+    return (
+      <div className="global-loader">
+        <div className="spinner"></div>
+        <p>Loading gallery...</p>
+      </div>
+    );
   if (status === "error") return "Something went wrong...";
   console.log(data);
   const allPins = data?.pages.flatMap((page) => page.pins) || [];
