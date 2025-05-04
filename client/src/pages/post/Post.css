@@ -3,6 +3,7 @@
   justify-content: center;
   gap: 32px;
 }
+
 .postContainer {
   width: 70%;
   display: flex;
@@ -51,5 +52,8 @@
   .postContainer {
     flex-direction: column;
     max-height: unset;
+  }
+  .postPage svg{
+    display: none;
   }
 }

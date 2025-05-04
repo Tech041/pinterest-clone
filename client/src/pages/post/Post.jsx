@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Image from "../../components/image/Image";
 import PostInteractions from "../../components/postInteractions/PostInteractions";
 import "./Post.css";
@@ -8,6 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import apiRequest from "../../utils/apiRequest";
 
 const Post = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const { isPending, error, data } = useQuery({
     queryKey: ["pin", id],
@@ -21,6 +22,7 @@ const Post = () => {
   return (
     <div className="postPage">
       <svg
+        onClick={() => navigate("/")}
         height="20"
         viewBox="0 0 24 24"
         width="20"

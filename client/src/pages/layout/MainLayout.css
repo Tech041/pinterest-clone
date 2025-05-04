@@ -7,3 +7,7 @@
   flex: 1;
   margin-right: 16px;
 }
+
+.leftbar-container.open {
+  display: none;
+}
