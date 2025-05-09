@@ -29,15 +29,16 @@
   background: white;
   right: 0;
   top: 0;
-  left: -20px;
   height: 100vh;
   z-index: 800;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 .mobileButtons.open {
-  position: absolute;
-  transform: translateY(100%);
+  display: block;
+}
+.mobileButtons.close {
+  display: none;
 }
 .mobileButtons ul {
   display: flex;

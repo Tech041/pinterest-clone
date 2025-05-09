@@ -31,7 +31,7 @@ const TopBar = () => {
         )}
       </div>
       {/* Mobile buttons */}
-      <div className={`mobileButtons ${open ? "open" : ""}`}>
+      <div className={`mobileButtons ${open ? "open" : "close"}`}>
         <ul className="">
           <li onClick={() => setOpen((prev) => !prev)} className="">
             <CiHome size={30} color=" gray" />
@@ -46,7 +46,7 @@ const TopBar = () => {
             </Link>
           </li>
 
-           {/* <li onClick={() => setOpen((prev) => !prev)} className="">
+          {/* <li onClick={() => setOpen((prev) => !prev)} className="">
             <Image
               path="/general/settings.svg"
               alt="settings_icon"
