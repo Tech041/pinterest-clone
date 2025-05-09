@@ -61,7 +61,6 @@
   justify-content: center;
   gap: 16px;
   margin-top: 4px;
-  
 }
 @media (max-width: 792px) {
   .userButton {
@@ -73,6 +72,7 @@
 }
 .icon {
   z-index: 999;
+  cursor: pointer;
 }
 
 @media (min-width: 793px) {

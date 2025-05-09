@@ -23,7 +23,7 @@ const TopBar = () => {
         <Image path="/general/search.svg" alt="search_input" className="" />
         <input type="text" placeholder="Search" className="" />
       </form>
-      <div onClick={() => setOpen((prev) => !prev)} className="icon">
+      <div onClick={() => setOpen((prev) => !prev)} className="icon ">
         {open ? (
           <IoCloseSharp size={30} color="black" />
         ) : (
