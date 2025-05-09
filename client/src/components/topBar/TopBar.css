@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  position: relative;
 }
 
 .search {
@@ -21,4 +22,65 @@
   border: none;
   outline: none;
   font-size: 18px;
+}
+.mobileButtons {
+  position: fixed;
+  color: rgb(230, 39, 39);
+  background: white;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 800;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+  width: 100vw;
+}
+.mobileButtons.open {
+  position: absolute;
+  transform: translateX(-100%);
+}
+.mobileButtons ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.mobileButtons ul li {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  color: green;
+}
+.mobileBtn {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 4px;
+  color: red;
+  
+
+}
+@media (max-width: 792px) {
+  .userButton {
+    display: none;
+  }
+  .topBar {
+    padding: 0px 28px;
+  }
+}
+.icon {
+  z-index: 999;
+}
+
+@media (min-width: 793px) {
+  .icon {
+    display: none;
+  }
+  .mobileButtons {
+    display: none;
+  }
 }

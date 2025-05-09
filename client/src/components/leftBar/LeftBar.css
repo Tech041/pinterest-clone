@@ -43,3 +43,8 @@
   width: 24px;
   height: 24px;
 }
+@media (max-width: 792px) {
+  .leftBar {
+    display: none;
+  }
+}

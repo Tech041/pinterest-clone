@@ -31,31 +31,40 @@ const UserButton = () => {
   };
 
   return currentUser ? (
-    <div className="userButton">
-      <Image
-        path={currentUser.img || "/general/noAvatar.png"}
-        alt="no_avatar_icon"
-        className=""
-      />
-      <div className="" onClick={() => setOpen((prev) => !prev)}>
+    <>
+      <div className="userButton">
         <Image
-          path="/general/arrow.svg"
+          path={currentUser.img || "/general/noAvatar.png"}
           alt="no_avatar_icon"
-          className="arrow"
+          className=""
         />
-      </div>
-      {open && (
-        <div className="userOptions">
-          <Link to={`/profile/${currentUser.username}`} className="userOption">
-            Profile
-          </Link>
-          <div className="userOption">Setting</div>
-          <div onClick={handleLogout} className="userOption">
-            Logout
-          </div>
+        <div className="" onClick={() => setOpen((prev) => !prev)}>
+          <Image
+            path="/general/arrow.svg"
+            alt="no_avatar_icon"
+            className="arrow"
+          />
         </div>
-      )}
-    </div>
+        {open && (
+          <div className="userOptions">
+            <Link
+              to={`/profile/${currentUser.username}`}
+              className="userOption"
+            >
+              Profile
+            </Link>
+            <div className="userOption">Setting</div>
+            <div onClick={handleLogout} className="userOption">
+              Logout
+            </div>
+          </div>
+        )}
+      </div>
+      {/* For mobile */}
+      <div onClick={handleLogout} className="mobileLogout">
+        Logout
+      </div>
+    </>
   ) : (
     <Link to={"/auth"} className="loginLink">
       Login

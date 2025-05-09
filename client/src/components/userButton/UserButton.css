@@ -45,9 +45,8 @@
 .loginLink:hover {
   background: #f1f1f1;
 }
-
-@media (max-width: 475px) {
-  .userButton {
-    display: none;
+@media (max-width: 793px) {
+  .mobileLogout {
+    display: block;
   }
 }
