@@ -29,8 +29,7 @@
   background: rgb(218, 212, 212);
   right: 0;
   top: 0;
-  bottom: 0;
-  height: 100vh;
+  height: 100%;
   z-index: 800;
   width: 70%;
   overflow: hidden;
@@ -62,7 +61,7 @@
   justify-content: center;
   gap: 16px;
   margin-top: 4px;
-  color: red;
+  
 }
 @media (max-width: 792px) {
   .userButton {

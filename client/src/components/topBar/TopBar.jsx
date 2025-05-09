@@ -59,7 +59,6 @@ const TopBar = () => {
         </ul>
         {/* mobile userButton */}
         <div className="mobileBtn">
-          <IoMdLogOut size={30} color=" red" />
           <UserButton />
         </div>
       </div>
