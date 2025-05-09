@@ -29,6 +29,7 @@
   background: white;
   right: 0;
   top: 0;
+  left: 0;
   height: 100vh;
   z-index: 800;
   transform: translateY(0);
@@ -61,8 +62,6 @@
   gap: 16px;
   margin-top: 4px;
   color: red;
-  
-
 }
 @media (max-width: 792px) {
   .userButton {
