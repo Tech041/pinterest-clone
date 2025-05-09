@@ -25,9 +25,9 @@ const TopBar = () => {
       </form>
       <div onClick={() => setOpen((prev) => !prev)} className="icon">
         {open ? (
-          <GiHamburgerMenu size={30} color="red" />
-        ) : (
           <IoCloseSharp size={30} color="black" />
+        ) : (
+          <GiHamburgerMenu size={30} color="red" />
         )}
       </div>
       {/* Mobile buttons */}

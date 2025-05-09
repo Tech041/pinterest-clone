@@ -29,6 +29,7 @@
   background: rgb(218, 212, 212);
   right: 0;
   top: 0;
+  bottom: 0;
   height: 100vh;
   z-index: 800;
   width: 70%;
