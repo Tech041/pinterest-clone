@@ -26,12 +26,12 @@
 .mobileButtons {
   position: fixed;
   color: rgb(230, 39, 39);
-  background: white;
+  background: rgb(218, 212, 212);
   right: 0;
   top: 0;
   height: 100vh;
   z-index: 800;
-  width: 100%;
+  width: 70%;
   overflow: hidden;
 }
 .mobileButtons.open {
