@@ -48,5 +48,10 @@
 @media (max-width: 793px) {
   .mobileLogout {
     display: block;
+    cursor: pointer;
+    color: red;
+    padding: 4px 6px;
+    border: none;
+    border-radius: 8px;
   }
 }

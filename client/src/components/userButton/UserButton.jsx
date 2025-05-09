@@ -61,9 +61,9 @@ const UserButton = () => {
         )}
       </div>
       {/* For mobile */}
-      <div onClick={handleLogout} className="mobileLogout">
+      <button onClick={handleLogout} className="mobileLogout">
         Logout
-      </div>
+      </button>
     </>
   ) : (
     <Link to={"/auth"} className="loginLink">
