@@ -32,9 +32,8 @@
   left: -20px;
   height: 100vh;
   z-index: 800;
-  transform: translateY(0);
-  transition: transform 0.5s ease;
   width: 100vw;
+  overflow: hidden;
 }
 .mobileButtons.open {
   position: absolute;
