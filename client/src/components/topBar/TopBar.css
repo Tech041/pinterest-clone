@@ -31,13 +31,13 @@
   top: 0;
   height: 100vh;
   z-index: 800;
-  transform: translateX(0);
+  transform: translateY(0);
   transition: transform 0.5s ease;
   width: 100vw;
 }
 .mobileButtons.open {
   position: absolute;
-  transform: translateX(-100%);
+  transform: translateY(100%);
 }
 .mobileButtons ul {
   display: flex;
