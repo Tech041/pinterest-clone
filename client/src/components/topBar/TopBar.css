@@ -80,6 +80,6 @@
     display: none;
   }
   .mobileButtons {
-    display: none;
+    display: none !important;
   }
 }
