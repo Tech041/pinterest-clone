@@ -23,7 +23,7 @@ const Auth = () => {
       if (res.data.success) {
         toast.success(res.data.message);
         setCurrentUser(res.data);
-        navigate("/");
+        navigate("/home");
       } else {
         toast.error(res.data.message);
       }
