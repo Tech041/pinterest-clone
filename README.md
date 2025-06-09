@@ -28,7 +28,7 @@ Prerequisites
 Ensure you have the following installed:
 - Node.js
 -  - Clone the repository:
-git clone https://github.com/Tech041/nelpinterest.git
+git clone https://github.com/Tech041/pinterest-clone.git
 npm install
 - Set up environment variables:
 Create a .env file in the root directory and add
