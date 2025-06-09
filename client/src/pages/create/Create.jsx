@@ -50,6 +50,7 @@ const Create = () => {
       formData.append("textOptions", JSON.stringify(textOptions));
       formData.append("canvasOptions", JSON.stringify(canvasOptions));
       try {
+        console.log("Formdata are",formData)
         const res = await apiRequest.post("/pins", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
